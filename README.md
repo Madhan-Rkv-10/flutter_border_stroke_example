@@ -1,16 +1,35 @@
-# border_stroke_example
+# Flutter BorderSide.strokeAlign Demo
 
-A new Flutter project.
+![Demo Output]<img src="border-output.gif" width="50%">
 
-## Getting Started
+A visual demonstration of Flutter's `BorderSide.strokeAlign` property showing various border shapes with animated stroke alignment.
 
-This project is a starting point for a Flutter application.
+## Features
 
-A few resources to get you started if this is your first Flutter project:
+- Demonstrates 6 different border shapes:
+  - StadiumBorder
+  - CircleBorder
+  - OvalBorder
+  - BeveledRectangleBorder (standard and rounded)
+  - RoundedRectangleBorder (standard and rounded)
+  - StarBorder (standard, 8-point, and 6-side polygon)
+- Animated stroke alignment transition (inside ↔ center ↔ outside)
+- Clean, responsive layout with labeled examples
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How It Works
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+The app uses:
+
+- `AnimationController` to animate the `strokeAlign` value between -1 (inside) and 1 (outside)
+- Various `ShapeBorder` implementations to demonstrate different border styles
+- Custom `BorderedBox` widget for consistent sizing and margins
+
+## Code Structure
+
+```plaintext
+lib/
+├── main.dart            # Main application entry point
+│   ├── StrokeAlignApp   # Root widget
+│   ├── StrokeAlignExample # Demo page stateful widget
+│   └── BorderedBox      # Reusable bordered container
+```
